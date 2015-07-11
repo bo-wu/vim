@@ -34,6 +34,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Raimondi/delimitMate'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+"Plugin 'roman/golden-ratio'
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plugin 'vim-scripts/a.vim'
 Plugin 'vim-scripts/c.vim'
@@ -54,7 +55,6 @@ filetype indent plugin on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 set nu           " display the line number
 set nocp
-set splitright	 " show new window on the right when using 'split'
 set wildmenu     " Turn on wildmenu, useful on commandline completetion
 set ruler        " Always show current position
 set mouse=a      " use the mouse
@@ -165,10 +165,17 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1
 let g:miniBufExplMoreThanOne=0
-map <C-k> <C-w><Up>
-map <C-j> <C-w><Down>
-map <C-l> <C-w><Right>
-map <C-h> <C-w><Left>
+" MiniBufExpl Colors
+hi MBEVisibleActive guifg=#A6DB29 guibg=fg
+hi MBEVisibleChangedActive guifg=#F1266F guibg=fg
+hi MBEVisibleChanged guifg=#F1266F guibg=fg
+hi MBEVisibleNormal guifg=#5DC2D6 guibg=fg
+hi MBEChanged guifg=#CD5907 guibg=fg
+hi MBENormal guifg=#808080 guibg=fg
+nnoremap <C-k> <C-w><Up>
+nnoremap <C-j> <C-w><Down>
+nnoremap <C-l> <C-w><Right>
+nnoremap <C-h> <C-w><Left>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " NERDCommenter <leader>cc, <leader>cu, <leader>c<space>
 " NERDTree settings
